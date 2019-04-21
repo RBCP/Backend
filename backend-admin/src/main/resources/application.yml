@@ -1,0 +1,21 @@
+spring:
+  profiles:
+    active: dev
+mybatis:
+  mapper-locations:
+    - calsspath:dao/*.xml
+    - classpath*:com/**/mapper/*.xml
+jwt:
+  tokenHeader: Authorization
+  secret: mySecret
+  expiration: 604800
+  tokenHead: Bearer
+datasource:
+  url: jdbc:mysql://127.0.0.1:3306/backend
+  driverClass: com.mysql.jdbc.Driver
+  username: root
+  password: lcl1402111
+logging:
+  level:
+    root: info
+    backend.admin: debug
